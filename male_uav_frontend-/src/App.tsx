@@ -11,10 +11,8 @@ import { DashboardPage } from './pages/DashboardPage';
 import { LiveMonitoringPage } from './pages/LiveMonitoringPage';
 import { DigitalTwinPage } from './pages/DigitalTwinPage';
 import { AIPredictionsPage } from './pages/AIPredictionsPage';
-import { HybridVerificationPage } from './pages/HybridVerificationPage';
 import { MissionControlPage } from './pages/MissionControlPage';
 import { MissionReplayPage } from './pages/MissionReplayPage';
-import { FaultInjectionPage } from './pages/FaultInjectionPage';
 import { MaintenancePage } from './pages/MaintenancePage';
 import { FleetMonitoringPage } from './pages/FleetMonitoringPage';
 import { AlertCenterPage } from './pages/AlertCenterPage';
@@ -22,8 +20,6 @@ import { MultiAgentAiPage } from './pages/MultiAgentAiPage';
 import { ContinuousLearningPage } from './pages/ContinuousLearningPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { SystemHealthPage } from './pages/SystemHealthPage';
-import { GarudaAIPage } from './pages/GarudaAIPage';
-import { GarudaFloatingBadge } from './components/GarudaFloatingBadge';
 
 const MainLayout: React.FC = () => {
   const { systemReady, activeTab, nightVisionMode, startDemoTour } = useGcs();
@@ -95,14 +91,10 @@ const MainLayout: React.FC = () => {
         return <DigitalTwinPage />;
       case 'ai-predictions':
         return <AIPredictionsPage />;
-      case 'hybrid-verification':
-        return <HybridVerificationPage />;
       case 'mission-control':
         return <MissionControlPage />;
       case 'replay':
         return <MissionReplayPage />;
-      case 'fault-injection':
-        return <FaultInjectionPage />;
       case 'maintenance':
         return <MaintenancePage />;
       case 'fleet':
@@ -117,8 +109,6 @@ const MainLayout: React.FC = () => {
         return <ReportsPage />;
       case 'system-health':
         return <SystemHealthPage />;
-      case 'garuda-ai':
-        return <GarudaAIPage />;
       default:
         return <DashboardPage />;
     }
@@ -176,9 +166,6 @@ const MainLayout: React.FC = () => {
 
       {/* Judge Guided Presentation & Evaluation Tour Modal */}
       <DemoTourModal />
-
-      {/* Persistent Global Mission Intelligence Floating Badge */}
-      <GarudaFloatingBadge />
     </div>
   );
 };

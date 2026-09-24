@@ -21,7 +21,6 @@ import { useGcs } from '../contexts/GcsContext';
 import { Gauge } from '../components/common/Gauge';
 import { MetricCard } from '../components/common/MetricCard';
 import { StatusBadge } from '../components/common/StatusBadge';
-import { GarudaAIPanel } from '../components/GarudaAIPanel';
 
 export const DashboardPage: React.FC = () => {
   const { 
@@ -141,13 +140,6 @@ export const DashboardPage: React.FC = () => {
             >
               <Cpu className="w-4 h-4 text-blue-400" />
               <span>3D Digital Twin</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('fault-injection')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#15171A] hover:bg-[#2A2D33] text-gray-200 border border-[#2A2D33] text-xs font-semibold transition-all"
-            >
-              <Sliders className="w-4 h-4 text-amber-400" />
-              <span>Fault Simulator</span>
             </button>
             <button
               onClick={startDemoTour}
@@ -568,10 +560,7 @@ export const DashboardPage: React.FC = () => {
         </div>
       </div>
 
-      {/* GARUDA-AI Enterprise Mission Intelligence Panel */}
-      <div className="h-[400px]">
-        <GarudaAIPanel />
-      </div>
+
 
       {/* Right Slide-Over Defense Intelligence Analysis Drawer Panel */}
       {activeDrawer && (

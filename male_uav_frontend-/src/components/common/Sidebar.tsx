@@ -168,10 +168,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggleCollapse 
           {!isCollapsed && 'OPERATIONAL MODULES'}
         </div>
 
-        {/* Top 8 Menu Items up to Fault Simulator */}
+        {/* Main Nav Items */}
         {filteredTopItems.map(item => renderNavItem(item, false))}
 
-        {/* Expandable "More Modules" Dropdown immediately below Fault Simulator */}
+        {/* Expandable "More Modules" Dropdown */}
         {(!isSearching && filteredMoreItems.length > 0) && (
           <div className="space-y-1 pt-1 border-t border-[#E2E8F0]">
             <button
