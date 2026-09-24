@@ -77,6 +77,15 @@ export const Navbar: React.FC<NavbarProps> = () => {
             ALERT
           </button>
           </div>
+          
+          {/* Simulator button pushed to far right */}
+          <button
+            onClick={() => window.open('http://localhost:3000/simulator', '_blank')}
+            className="ml-auto flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 border border-blue-700 rounded-lg text-white font-bold text-sm tracking-wide transition-colors shadow-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            SIMULATOR
+          </button>
         </>
       )}
     </header>
